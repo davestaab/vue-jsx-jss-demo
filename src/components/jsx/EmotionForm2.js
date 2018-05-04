@@ -66,28 +66,28 @@ const createRow = (label, name, handler) => h => {
   )
 }
 
-const FormContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-`;
+const FormContainer = styled("div")({
+  "display": "flex",
+  "flex-direction": "column",
+  "padding": "20px"
+});
 
-const FormRow = styled("div")`
-  display: flex;
-  align-items: center;
-`;
+const FormRow = styled("div")({
+  "display": "flex",
+  "align-items": "center"
+});
 
-const FormLabel = styled("label")`
-  flex-basis: 200px;
-  text-align: right;
-  margin-right: 15px;
-`;
+const FormLabel = styled("label")({
+  "flex-basis":" 200px",
+  "text-align":" right",
+  "margin-right":" 15px"
+});
 
-const FormWrapper = styled("div")`
-  flex-grow: 1;
-  display: flex-inline;
-  align-items: flex-start;
-`;
+const FormWrapper = styled("div")({
+  "flex-grow":" 1",
+  "display":" flex-inline",
+  "align-items":" flex-start",
+});
 
 const FormInput = styled("input", { disabled: Boolean })`
   border-radius: 3px;
