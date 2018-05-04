@@ -2,6 +2,8 @@
 
 > A demo of the pros and cons of JSS libraries.
 
+[Demo site](https://mlturner88.github.io/vue-jsx-jss-demo/)
+
 ## Build Setup
 
 ``` bash
