@@ -1,7 +1,7 @@
-import styled from "vue-styled-components";
+import styled from "vue-emotion";
 
 export default {
-  name: "StyledComponentFormJsx",
+  name: "EmotionFormJsx",
   render() {
     return (
       <FormContainer>
@@ -12,7 +12,7 @@ export default {
           </FormWrapper>
         </FormRow>
         <FormRow>
-          <FormSubmit nativeOnClick={this.submitForm}>Submit</FormSubmit>
+          <FormSubmit onClick={this.submitForm}>Submit</FormSubmit>
         </FormRow>
         <FormRow>
           <ErrorText>{this.error}</ErrorText>
@@ -40,24 +40,24 @@ export default {
   }
 };
 
-const FormContainer = styled.div`
+const FormContainer = styled("div")`
   display: flex;
   flex-direction: column;
   padding: 20px;
 `;
 
-const FormRow = styled.div`
+const FormRow = styled("div")`
   display: flex;
   align-items: center;
 `;
 
-const FormLabel = styled.label`
+const FormLabel = styled("label")`
   flex-basis: 200px;
   text-align: right;
   margin-right: 15px;
 `;
 
-const FormWrapper = styled.div`
+const FormWrapper = styled("div")`
   flex-grow: 1;
   display: flex-inline;
   align-items: flex-start;
@@ -68,7 +68,7 @@ const FormInput = styled("input", { disabled: Boolean })`
   background: ${props => (props.disabled ? "grey" : "transparent")};
 `;
 
-const FormSubmit = styled.a`
+const FormSubmit = styled("a")`
   background: transparent;
   border: 1px solid black;
   color: black;
@@ -78,6 +78,6 @@ const FormSubmit = styled.a`
   cursor: pointer;
 `;
 
-const ErrorText = styled.span`
+const ErrorText = styled("span")`
   color: red;
 `;

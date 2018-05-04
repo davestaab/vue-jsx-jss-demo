@@ -7,7 +7,7 @@
       </form-wrapper>
     </form-row>
     <form-row>
-      <form-submit @click.native="submitForm">Submit</form-submit>
+      <form-submit @click="submitForm">Submit</form-submit>
     </form-row>
     <form-row>
       <error-text>{{error}}</error-text>
@@ -16,26 +16,26 @@
 </template>
 
 <script>
-import styled from "vue-styled-components";
+import styled from "vue-emotion";
 
 export default {
-  name: "StyledComponentFormVue",
+  name: "EmotionFormVue",
   components: {
-    FormContainer: styled.div`
+    FormContainer: styled("div")`
       display: flex;
       flex-direction: column;
       padding: 20px;
     `,
-    FormRow: styled.div`
+    FormRow: styled("div")`
       display: flex;
       align-items: center;
     `,
-    FormLabel: styled.label`
+    FormLabel: styled("label")`
       flex-basis: 200px;
       text-align: right;
       margin-right: 15px;
     `,
-    FormWrapper: styled.div`
+    FormWrapper: styled("div")`
       flex-grow: 1;
       display: flex-inline;
       align-items: flex-start;
@@ -44,7 +44,7 @@ export default {
       border-radius: 3px;
       background: ${props => (props.disabled ? "grey" : "transparent")};
     `,
-    FormSubmit: styled.a`
+    FormSubmit: styled("a")`
       background: transparent;
       border: 1px solid black;
       color: black;
@@ -53,7 +53,7 @@ export default {
       margin: 20px 100px;
       cursor: pointer;
     `,
-    ErrorText: styled.span`
+    ErrorText: styled("span")`
       color: red;
     `
   },
