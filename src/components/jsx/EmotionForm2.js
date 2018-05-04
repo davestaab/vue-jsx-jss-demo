@@ -11,9 +11,11 @@ export default {
             <FormInput type="text" value={this.name} onInput={this.input} />
           </FormWrapper>
         </FormRow>
-        {createRow('Last Name', this.lastName, this.lastNameInput)(h)}
-        {createRow('Middle Name', this.middleName, this.handle('middleName'))(h)}
-        {createRow('Address', this.address, this.handle('address'))(h)}
+        {createRow("Last Name", this.lastName, this.lastNameInput)(h)}
+        {createRow("Middle Name", this.middleName, this.handle("middleName"))(
+          h
+        )}
+        {createRow("Address", this.address, this.handle("address"))(h)}
         <FormRow>
           <FormSubmit onClick={this.submitForm}>Submit</FormSubmit>
         </FormRow>
@@ -44,7 +46,7 @@ export default {
       this.lastName = e.target.value;
     },
     handle(name) {
-      return (e) => {
+      return e => {
         this[name] = e.target.value;
       };
     }
@@ -60,11 +62,11 @@ const createRow = (label, name, handler) => h => {
       <FormLabel>{label}:</FormLabel>
       <FormWrapper>
         <FormInput type="text" value={name} onInput={handler} />
-      &nbsp;{name}
+        {name}
       </FormWrapper>
     </FormRow>
-  )
-}
+  );
+};
 
 const FormContainer = styled("div")`
   display: flex;
